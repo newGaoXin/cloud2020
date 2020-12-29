@@ -6,10 +6,16 @@ spring:
     name: config-client
   cloud:
     config:
-      label: master
+      label: main
       name: config
       profile: dev
       uri: http://localhost:3344
+  # RabbitMQ相关配置 15672是web管理界面的端口，5672是MQ访问的端口
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 eureka:
   client:
     service-url:
