@@ -10,7 +10,7 @@ spring:
           uri: https://github.com/newGaoXin/sprincloud-config.git
         ####搜索目录
           search-paths:
-            - com.springcloud-config
+            - com.com.atguigu.springcloud-config
       ####读取分支
       label: main
 
