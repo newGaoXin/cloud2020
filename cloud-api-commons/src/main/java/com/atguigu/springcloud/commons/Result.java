@@ -7,13 +7,13 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Result {
+public class Result<T> {
 
     private Integer code;
 
     private String message;
 
-    private Object data;
+    private T data;
 
     public Result(Integer code,String message){
         this(code,message,null);
