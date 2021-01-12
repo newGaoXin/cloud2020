@@ -4,17 +4,22 @@
 
     <resultMap id="BaseResultMap" type="com.atguigu.springcloud.alibaba.domain.Order">
         <id column="id" property="id" jdbcType="BIGINT"></id>
-        <result
+        <result column="user_id" property="userId" jdbcType="BIGINT"/>
+        <result column="product_id" property="productId" jdbcType="BIGINT"/>
+        <result column="count" property="count" jdbcType="INTEGER"/>
+        <result column="money" property="money" jdbcType="DECIMAL"/>
+        <result column="status" property="status" jdbcType="INTEGER"/>
     </resultMap>
 
     <!--    新增订单-->
     <insert id="create">
-        INSERT INTO t_order(`id`,`user_id`,`producte_id`,`count`,`money`,`statsu`)
-        VALUES (null ,#{userId},#{productId},#{count},#{money},#{status})
+        INSERT INTO t_order(`id`,`user_id`,`product_id`,`count`,`money`,`status`)
+        VALUES (null ,#{userId},#{productId},#{count},#{money},0)
     </insert>
 
     <update id="updateStatus">
-        update from t_order set `status` = 1
+        update t_order
+        set `status` = 1
         WHERE `user_id` = #{userId} and `status` = #{status};
     </update>
 

@@ -11,11 +11,11 @@ public class Result<T> {
 
     private int code;
 
-    private String message;
+    private String msg;
 
     private T data;
 
-    public Result(int code, String message) {
-        this(code, message, null);
+    public Result(int code,String msg){
+        this(code,msg,null);
     }
 }

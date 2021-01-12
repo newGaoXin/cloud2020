@@ -17,11 +17,11 @@ import javax.sql.DataSource;
 public class DataSourceProxyConfig {
 
     @Value("${mybatis.mapperLocations}")
-    private String mapperLocations;
+    public String mapperLocations;
 
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource")
-    public DataSource druidDataSource() {
+    public DataSource druidDataSource(){
         return new DruidDataSource();
     }
 

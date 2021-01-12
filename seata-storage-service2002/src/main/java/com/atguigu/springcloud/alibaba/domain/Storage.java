@@ -4,27 +4,23 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Order {
+public class Storage {
 
+    //
     private Long id;
-
-    // 用户id
-    private Long userId;
 
     // 产品id
     private Long productId;
 
-    // 数量
-    private int count;
+    // 总库存
+    private int total;
 
-    // 金额
-    private BigDecimal money;
+    // 已用库存
+    private int used;
 
-    // 订单状态：0：创建中; 1：已完结
-    private int status;
+    // 剩余库存
+    private int residue;
 }

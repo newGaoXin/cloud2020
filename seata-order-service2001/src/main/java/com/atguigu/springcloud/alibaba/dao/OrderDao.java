@@ -11,5 +11,5 @@ public interface OrderDao {
     public void create(Order order);
 
     // 修改订单状态
-    public Order updateStatus(@Param("userId") Long userId, @Param("status") int status);
+    public void updateStatus(@Param("userId") Long userId, @Param("status") int status);
 }

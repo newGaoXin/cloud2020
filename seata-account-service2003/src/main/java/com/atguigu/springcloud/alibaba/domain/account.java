@@ -9,22 +9,20 @@ import java.math.BigDecimal;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Order {
+public class account {
 
+    //
     private Long id;
 
     // 用户id
     private Long userId;
 
-    // 产品id
-    private Long productId;
+    // 总额度
+    private BigDecimal total;
 
-    // 数量
-    private int count;
+    // 已用余额
+    private BigDecimal used;
 
-    // 金额
-    private BigDecimal money;
-
-    // 订单状态：0：创建中; 1：已完结
-    private int status;
+    // 剩余可用额度
+    private BigDecimal residue;
 }
