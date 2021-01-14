@@ -46,6 +46,6 @@ public class OrderServiceImpl implements OrderService {
         orderDao.updateStatus(order.getUserId(),0);
         log.info("----->修改订单状态结束");
 
-        log.info("----->下订单结束了");
+        log.info("----->下订单结束了"); 
     }
 }
